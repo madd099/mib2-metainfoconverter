@@ -7,6 +7,7 @@ The program includes built-in safeguards to prevent errors; for example, if you 
 
 ## Usage
 ```
+pip install PyQt5
 python mibcongui.py
 ```
 or download MIB2_Converter.zip with compiled .exe from "releases"
@@ -26,6 +27,7 @@ ________________________________________________________________________________
 
 ## Запуск
 ```
+pip install PyQt5
 python mibcongui.py
 ```
 или MIB2_Converter.zip с готовым файлом .exe из вкладки "releases"
