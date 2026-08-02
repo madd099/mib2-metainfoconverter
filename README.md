@@ -1,7 +1,7 @@
 # Universal metainfo2.txt converter for MIB STD2 Technisat/Preh units
 
 ## Description
-This program is created to help you to prepare the `metainfo2.txt` file from a target firmware (EU region) so it can be flashed onto a unit from any region or brand. It supports conversions such as ZR-to-ZR and PQ-to-PQ, as well as flashing ZR HMI firmware onto a PQ unit.
+This program is created to help you prepare the `metainfo2.txt` file from a target firmware (EU region) so it can be flashed onto a unit from any region or brand. It supports conversions such as ZR-to-ZR and PQ-to-PQ, as well as flashing ZR HMI firmware onto a PQ unit.
 The program automatically selects the most suitable "Variant" from the `metainfo2.txt` file, replaces it with the one you specify, and creates the necessary links for your hardware. It also creates a backup.
 The program includes built-in safeguards to prevent errors; for example, if you enter a Variant intended for a ZR unit but provide a `metainfo` file from PQ firmware, the program will display an error message.
 
