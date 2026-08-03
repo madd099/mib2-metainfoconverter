@@ -32,6 +32,6 @@ python mibcongui.py
 ```
 или MIB2_Converter.zip с готовым файлом .exe из вкладки "releases"
 
-## Links
+## Ссылки
 
 Инструкции и скрины на [drive2.ru](https://www.drive2.ru/l/712304865233085471/)
