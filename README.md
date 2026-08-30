@@ -6,7 +6,7 @@
 
 ## ⬇️ Скачать
 
-Готовые сборки — на странице [Releases](https://github.com/madd099/mib2-metainfoconverter/releases):
+Готовые сборки — на странице [Releases](https://github.com/madd099/mib2-metainfoconverter/releases)
 
 
 ## ✨ Изменения в версии 2.0
