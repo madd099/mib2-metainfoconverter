@@ -1,5 +1,4 @@
 VARIANT_DB = {
-    # VW ZR variants
     "17203": {
         "brand": "VW",
         "platform": "ZR",
@@ -56,7 +55,6 @@ VARIANT_DB = {
         "navi": "yes",
         "dab": "no",
     },
-    # VW PQ variants
     "17214": {
         "brand": "VW",
         "platform": "PQ",
@@ -134,7 +132,6 @@ VARIANT_DB = {
         "navi": "yes",
         "dab": "no",
     },
-    # SEAT ZR variants
     "47201": {
         "brand": "SEAT",
         "platform": "ZR",
@@ -177,7 +174,6 @@ VARIANT_DB = {
         "navi": "yes",
         "dab": "yes",
     },
-    # SEAT PQ variants
     "47206": {
         "brand": "SEAT",
         "platform": "PQ",
@@ -206,7 +202,6 @@ VARIANT_DB = {
         "navi": "yes",
         "dab": "no",
     },
-    # Skoda ZR variants
     "37204": {
         "brand": "Skoda",
         "platform": "ZR",
@@ -242,7 +237,6 @@ VARIANT_DB = {
         "navi": "yes",
         "dab": "no",
     },
-    # Skoda PQ variants
     "37210": {
         "brand": "Skoda",
         "platform": "PQ",
