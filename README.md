@@ -1,37 +1,56 @@
-# Universal metainfo2.txt converter for MIB STD2 Technisat/Preh units
+# MIB2 Converter
 
-## Description
-This program is created to help you prepare the `metainfo2.txt` file from a target firmware (EU region) so it can be flashed onto a unit from any region or brand. It supports conversions such as ZR-to-ZR and PQ-to-PQ, as well as flashing ZR HMI firmware onto a PQ unit.
-The program automatically selects the most suitable "Variant" from the `metainfo2.txt` file, replaces it with the one you specify, and creates the necessary links for your hardware. It also creates a backup.
-The program includes built-in safeguards to prevent errors; for example, if you enter a Variant intended for a ZR unit but provide a `metainfo` file from PQ firmware, the program will display an error message.
+**Универсальный конвертер metainfo2.txt для MIB STD2 Technisat/Preh** · v2.0
 
-## Usage
+Программа позволяет подготовить файл metainfo2.txt целевой прошивки (EU региона) для прошивки в юнит любого региона, бренда. Как для конвертаций ZR-ZR, PQ-PQ, так и для прошивки HMI ZR в PQ юнит. Программа автоматически подберет наиболее подходящий Variant в файле metainfo2.txt и заменит его на введенный вами, а также создаст линки под ваше железо. Ну и бэкап сделает. В программу встроена защита "от дурака", например, если вы введете Variant от ZR юнита и подсунете программе metainfo от PQ прошивки, вылезет соответствующая ошибка.
+
+## ⬇️ Скачать
+
+Готовые сборки — на странице [Releases](https://github.com/madd099/mib2-metainfoconverter/releases):
+`MIB2_Converter_v2.exe` — Windows 10/11 x64, портативный, без установки.
+
+## ✨ Изменения в версии 2.0
+
+- Обновлен (осовременен) интерфейс
+- Выпадающий список вариантов с параметрами прямо при вводе
+- В режиме **HMI ZR → PQ** замена варианта только в нужных секциях (`common`, `cpu\*hmizr*`, `cpuplus\*hmizr*`)
+- Режим **«Только смена линков»** — функция замены линков старого железа, без кроссконвертации и смены региона
+- Встроенный **HMI ZR-PQ патчер** (патч даты из будущего) + ссылка на патч ползунка громкости
+- Определение read-only файлов с понятной подсказкой
+- Удобный переключатель языка: 🇷🇺 / 🇺🇸
+
+## 🚀 Запуск из исходников
+
+Windows / Linux:
+```bash
+pip install PySide6
+python mibcongui_v2.py
 ```
-pip install PyQt5
-python mibcongui.py
-```
-or download MIB2_Converter.zip with compiled .exe from "releases"
 
-## Links
+## 🔧 Сборка
 
-Screenshots and guides on [drive2.ru](https://www.drive2.ru/l/712304865233085471/)
+- `build_windows.bat` → `dist\MIB2_Converter_v2.exe`
+- `build_linux.sh` → `dist/MIB2_Converter_v2`
 
-____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+## 📁 Структура
 
-# Универсальный конвертер metainfo2.txt для MIB STD2 Technisat/Preh
+| Файл | Назначение |
+|---|---|
+| `mibcongui_v2.py` | основной интерфейс и логика конвертации |
+| `clock_patcher.py` | встроенный патчер Hocv*.jxe (дата из будущего) |
+| `translations.py` | RU/EN локализация (программа + патчер) |
+| `variant_db.py` | база вариантов MIB STD2 |
+| `build_windows.bat` / `build_linux.sh` | сборка exe |
+| `requirements.txt` | зависимости |
 
-## Описание
-Программа позволяет подготовить файл metainfo2.txt целевой прошивки (EU региона) для прошивки в юнит любого региона, бренда. Как для конвертаций ZR-ZR, PQ-PQ, так и для прошивки HMI ZR в PQ юнит.
-Программа автоматически подберет наиболее подходящий Variant в файле metainfo2.txt и заменит его на введенный вами, а также создаст линки под ваше железо. Ну и бэкап сделает.
-В программу встроена защита "от дурака", например, если вы введете Variant от ZR юнита и подсунете программе metainfo от PQ прошивки, вылезет соответствующая ошибка.
+## 🔗 Полезные ссылки
 
-## Запуск
-```
-pip install PyQt5
-python mibcongui.py
-```
-или MIB2_Converter.zip с готовым файлом .exe из вкладки "releases"
+- [Гайд по программе на Drive2](https://www.drive2.ru/l/712304865233085471/)
+- [Патч даты из будущего — статья на Drive2](https://www.drive2.ru/l/712453299302827334)
+- [Патч ползунка громкости — статья на Drive2](https://www.drive2.ru/b/708474166721917664/)
+- [FAQ по MIB от lprot](https://www.drive2.ru/l/614500832041241045/)
 
-## Ссылки
+## ⚠️ Дисклеймер
 
-Инструкции и скрины на [drive2.ru](https://www.drive2.ru/l/712304865233085471/)
+Используете на свой страх и риск. Авторы не несут
+ответственности за «кирпичи».

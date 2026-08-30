@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Build previews / temp
+v2_preview.png
+v2_links_preview.png
+v2_header_preview.png
+v2_badge_preview.png
+*.bak
+
+# Test firmware (not for public repo)
+metainfos/
